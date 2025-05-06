@@ -4,6 +4,8 @@ import Footer from './Footer'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import ContactUs from './components/ContactUs'
+import About from './components/About'
+import Services from './components/Services'
 import './App.css'
 
 function App() {
@@ -19,13 +21,15 @@ function App() {
         <Route path='/about' element={
           <>
             <Navbar />
+            <About />
             <Footer />
           </>
         } />
         <Route path='/services' element={
           <>
             <Navbar />
-            <Footer />
+            <Services />
+            <Footer />  
           </>
         } />
         <Route path='/contact' element={

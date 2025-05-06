@@ -1,0 +1,81 @@
+.services_container_service_pg {
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+  }
+  
+  .header_section_service_pg {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .title_service_pg {
+    font-size: 3rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle_service_pg {
+    font-size: 1.2rem;
+    color: #4a5568;
+  }
+  
+  .vision_mission_section_about_pg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+  
+  .card_about_pg {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    width: 45%;
+    min-width: 280px;
+  }
+  
+  .heading_about_pg {
+    font-size: 1.5rem;
+    color: #2b6cb0;
+    margin-bottom: 10px;
+  }
+  
+  .text_about_pg {
+    font-size: 1rem;
+    color: #4a5568;
+  }
+  
+  .service_features_service_pg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+  }
+  
+  .feature_card_service_pg {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .feature_card_service_pg:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature_card_service_pg h3 {
+    color: #2c5282;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  
+  .feature_card_service_pg p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
