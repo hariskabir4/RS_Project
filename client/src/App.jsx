@@ -1,11 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Footer from './Footer'
+import Footer from './components/Footer'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import ContactUs from './components/ContactUs'
 import About from './components/About'
 import Services from './components/Services'
+import Home from './components/Home'
+import ViewReports from './components/ViewReports'
+import Upload from './components/Upload'
+
 import './App.css'
 
 function App() {
@@ -15,6 +19,7 @@ function App() {
         <Route path='/' element={
           <>
             <Navbar />
+            <Home />
             <Footer />
           </>
         } />
@@ -29,13 +34,13 @@ function App() {
           <>
             <Navbar />
             <Services />
-            <Footer />  
+            <Footer />
           </>
         } />
         <Route path='/contact' element={
           <>
             <Navbar />
-            <ContactUs/>
+            <ContactUs />
             <Footer />
           </>
         } />
@@ -56,8 +61,15 @@ function App() {
         <Route path='/veiw reports' element={
           <>
             <Navbar />
-            <Signup />
-            {/* <Footer /> */}
+            <ViewReports />
+            <Footer />
+          </>
+        } />
+        <Route path='/upload' element={
+          <>
+            <Navbar />
+            <Upload/>
+            <Footer />
           </>
         } />
       </Routes>

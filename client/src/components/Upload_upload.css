@@ -1,0 +1,62 @@
+.uploadContainer_upload {
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3faff;
+    min-height: 80vh;
+  }
+  
+  .title_upload {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+  }
+  
+  .uploadBox_upload {
+    background: #ffffff;
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .uploadBox_upload input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  .preview_upload img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .uploadBtn_upload {
+    margin-top: 20px;
+    background-color: #00897b;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .uploadBtn_upload:disabled {
+    background-color: #b2dfdb;
+    cursor: not-allowed;
+  }
+  
+  .uploadBtn_upload:hover:not(:disabled) {
+    background-color: #00695c;
+  }
+  
+  .response_upload {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #00695c;
+  }
+  
