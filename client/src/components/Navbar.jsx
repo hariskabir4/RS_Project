@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { useNavigate } from 'react-router-dom';
+import { useUser } from '../UserContext';
 
-const Navbar = ({ isLoggedIn, userName }) => {
+const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => setDropdownOpen((open) => !open);
   const navigate = useNavigate();
+  const { user, logout } = useUser();
+
+  const isLoggedIn = !!user;
+  const userName = user?.username || 'User';
+
   return (
     <nav className="Navbar_NavBar">
       <div className="Navbar_NavBar_Left">
@@ -20,10 +24,10 @@ const Navbar = ({ isLoggedIn, userName }) => {
       <div className="Navbar_NavBar_Right">
         <div
           className="Navbar_NavBar_User"
-          onClick={toggleDropdown}
+          onClick={() => setDropdownOpen((open) => !open)}
           style={{ cursor: 'pointer' }}
         >
-          <span className="Navbar_NavBar_User_Name">{isLoggedIn ? userName : 'User'}</span>
+          <span className="Navbar_NavBar_User_Name">{userName}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -38,13 +42,13 @@ const Navbar = ({ isLoggedIn, userName }) => {
             <div className="Navbar_NavBar_Dropdown">
               {isLoggedIn ? (
                 <>
-                <button onClick={() => navigate('/veiw-reports')} className="Navbar_NavBar_Dropdown_Item">Veiw Reports</button>
-                <button className="Navbar_NavBar_Dropdown_Item">Logout</button>
+                  <button onClick={() => navigate('/veiw-reports')} className="Navbar_NavBar_Dropdown_Item">Veiw Reports</button>
+                  <button onClick={logout} className="Navbar_NavBar_Dropdown_Item">Logout</button>
                 </>
               ) : (
                 <>
-                <button onClick={() => navigate('/veiw-reports')} className="Navbar_NavBar_Dropdown_Item">Veiw Reports</button>
-                <button onClick={() => navigate('/login')} className="Navbar_NavBar_Dropdown_Item">Login</button>
+                  <button onClick={() => navigate('/veiw-reports')} className="Navbar_NavBar_Dropdown_Item">Veiw Reports</button>
+                  <button onClick={() => navigate('/login')} className="Navbar_NavBar_Dropdown_Item">Login</button>
                 </>
               )}
             </div>

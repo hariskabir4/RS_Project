@@ -11,6 +11,7 @@ const Signup = () => {
     dob: "",
   });
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -22,20 +23,34 @@ const Signup = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setSuccess(false);
+    setError("");
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Signup failed");
       setSuccess(true);
-    }, 1000);
+      setTimeout(() => navigate("/login"), 1000);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="signup-container">
       <div className="signup-form">
         <h2>Signup</h2>
-        {success && <div className="success-message">Signup successful! (frontend only)</div>}
+        {error && <div className="error-message">{error}</div>}
+        {success && <div className="success-message">Signup successful!</div>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username</label>
