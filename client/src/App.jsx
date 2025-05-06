@@ -9,6 +9,7 @@ import Services from './components/Services'
 import Home from './components/Home'
 import ViewReports from './components/ViewReports'
 import Upload from './components/Upload'
+import ProtectedRoute from './ProtectedRoute'
 
 import './App.css'
 
@@ -59,18 +60,22 @@ function App() {
           </>
         } />
         <Route path='/veiw-reports' element={
-          <>
-            <Navbar />
-            <ViewReports />
-            <Footer />
-          </>
+          <ProtectedRoute>
+            <>
+              <Navbar />
+              <ViewReports />
+              <Footer />
+            </>
+          </ProtectedRoute>
         } />
         <Route path='/upload' element={
-          <>
-            <Navbar />
-            <Upload/>
-            <Footer />
-          </>
+          <ProtectedRoute>
+            <>
+              <Navbar />
+              <Upload/>
+              <Footer />
+            </>
+          </ProtectedRoute>
         } />
       </Routes>
     </div>
