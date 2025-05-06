@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './Footer'
 import Login from './components/Login'
 import Signup from './components/Signup'
+import ContactUs from './components/ContactUs'
 import './App.css'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='/contact' element={
           <>
             <Navbar />
+            <ContactUs/>
             <Footer />
           </>
         } />
