@@ -58,7 +58,7 @@ function App() {
             {/* <Footer /> */}
           </>
         } />
-        <Route path='/veiw reports' element={
+        <Route path='/veiw-reports' element={
           <>
             <Navbar />
             <ViewReports />

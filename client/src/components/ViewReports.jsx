@@ -7,14 +7,21 @@ const mockReports = [
     date: '2025-05-01',
     grade: 2,
     summary: 'Aggressive wound care, surgical debridement, antibiotics.',
-    image: '/sample-ulcer.png',
+    image: '/input_image.png',
   },
   {
     id: 2,
     date: '2025-04-27',
     grade: 4,
     summary: 'Extensive debridement, antibiotics, hospital admission advised.',
-    image: '/sample-ulcer2.png',
+    image: '/input_image.png',
+  },
+  {
+    id: 3,
+    date: '2025-05-10',
+    grade: 3,
+    summary: 'Sample report using provided image.',
+    image: '/input_image.png',
   },
 ];
 
