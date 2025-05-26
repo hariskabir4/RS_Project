@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home_homepg.css';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+  }, []);
+
   return (
     <div className="container_homepg">
       <header className="hero_homepg">
