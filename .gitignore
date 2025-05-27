@@ -7,7 +7,7 @@ dist/
 build/
 
 
-# Ignore only the models folder inside DFU_Rs
-DFU_Rs/models/
-DFU_Rs/data/
+# # Ignore only the models folder inside DFU_Rs
+# DFU_Rs/models/
+# DFU_Rs/data/
 
