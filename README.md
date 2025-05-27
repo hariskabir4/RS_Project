@@ -1,5 +1,5 @@
 # 🩺 AI-Based Diabetic Patient Management (ADPM)
-## Image-Based-Recommender-System-for-Personalized-Diabetic-Foot-Ulcer-Treatment-Using-Deep-Learning
+## Image Based Recommender System for Personalized Diabetic Foot Ulcer Treatment Using Deep Learning
 An end-to-end system for automated **Diabetic Foot Ulcer (DFU)** grade classification, treatment recommendation, explainability, and report generation — integrated with a mobile app and powered by deep learning and Supabase.
 ## Team Members:
 * Haris Kabir 
